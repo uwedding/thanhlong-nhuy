@@ -44,7 +44,7 @@ document
       body: JSON.stringify(data),
     })
       .then((res) => res.json()) // Nếu Apps Script trả về JSON
-      .then((res) => {});
+      .then((res) => { });
   });
 
 document
@@ -67,7 +67,7 @@ document
       body: JSON.stringify(data),
     })
       .then((res) => res.json()) // Nếu Apps Script trả về JSON
-      .then((res) => {});
+      .then((res) => { });
   });
 
 document
@@ -93,7 +93,7 @@ document
       body: JSON.stringify(data),
     })
       .then((res) => res.json()) // Nếu Apps Script trả về JSON
-      .then((res) => {});
+      .then((res) => { });
   });
 
 // Hiển thị notification
@@ -223,4 +223,16 @@ async function fetchMessages() {
 window.addEventListener("load", () => {
   console.log("🎉 Trang đã load xong");
   fetchMessages(); // Gọi hàm load dữ liệu
+});
+
+
+window.addEventListener('DOMContentLoaded', function () {
+  // Lấy tham số name từ URL
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get('name');
+  // Hiển thị vào div PARAGRAPH94 nếu có giá trị
+  if (name) {
+    const el = document.querySelector('#PARAGRAPH444 .ladi-paragraph');
+    if (el) el.textContent = name;
+  }
 });
